@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  dns-server:
+    image: doli82/mydns
+    hostname: doli82.mydns
+    build: .
+    restart: always
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
